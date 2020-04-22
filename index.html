@@ -6,25 +6,98 @@
     <title>Git Documentation Page</title>
 </head>
 <body>
-    <nav>
-
+    <nav id="navbar">
+        <header>
+            The topic of this documentation page is a brief introduction to Git.
+        </header>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#how_git_works" class="nav-link">How Git Works</a>
+        <a href="hosting_services" class="nav-link">Hosting Services</a>
+        <a href="setting_up_git" class="nav-link">Setting Up Git</a>
+        <a href="common_comands" class="nav-link">Common Commands</a>
     </nav>
     <main id="main-doc">
         <section id="introduction" class="main-section">
             <header>Introduction</header>
-            <p>Git is a type of <strong>version control system</strong> (VCS) that tracks changes in computer files and is useful for coordinating work between multiple users. It can help you </p>
+            <p>
+                Git is a type of <strong>version control system</strong> (VCS) that tracks changes in computer files and is useful for coordinating work between multiple users. It is hardly the first VCS out there but is by far the most popular one.
+            </p>
+            <p>
+                It can track <em>what</em> changed in an edit, <em>who</em> made that change, and <em>why</em> they made that change. From writing a novel, to creating code, to editing some design files, Git can track changes in all of these instance, and allow others to see and add to these changes. It is not just for programming; it can be used to make different versions of the work you do on a computer.
+            </p>
         </section>
-        <section class="main-section">
-            <header></header>
+        <section id="how_git_works" class="main-section">
+            <header>How Git Works</header>
+            <p>
+                When Git is intialized in a project, it creates a <strong>repository</strong> and stores that project's current state within it. 
+            </p>
+            <p>
+                After a user makes changes to a project in a repository, Git tracks those changes. To add these changes to the repository, a user must <strong>commit</strong> those changes to the repository. This creates a "checkpoint" or a branch that the user or someone else can <em>branch</em> off of (get it?).
+            </p>
+            <p>
+                Once all changes have been complete, branches that are deemed necessary or correct can be merged into the master branch. After that, a user can push these changes to the repository or pull changes for the repository. 
+            </p>
         </section>
-        <section class="main-section">
-            <header></header>
+        <section id="hosting_services" class="main-section">
+            <header>Hosting Services</header>
+            <p>
+                Some public Git hosting services include Bitbucket, GitHub, and Gitlab. These kind of hosting services are called <strong>repository management services</strong>.
+            </p>
+            <p>
+                These public hosting services are a great way to not only show one's work but to collaborate and connect with other developers in a public place. This is how a lot of open-source projects are coordinated; it is easy for users to branch from a project they find interesting and start putting their own stamp on an open-source project.
+            </p>
+            <p>
+                Here are some simple rules to always following when using one of these public repositories:
+            </p>
+            <ul>
+                <li><strong>Rule 1:</strong> Create a Git repository for every new project.</li>
+                <li><strong>Rule 2:</strong> Create a new branch for every new feature.</li>
+            </ul>
         </section>
-        <section class="main-section">
-            <header></header>
+        <section id="setting_up_git" class="main-section">
+            <header>Setting Up Git</header>
+            <p>
+                The good thing about Git is that it comes as a default to many systems. However, if you don't already have it: 
+                <ul>
+                    <li>
+                        GitHub has a nice graphical user interface (GUI) called <a href="https://desktop.github.com/">GitHub Desktop</a>. It is simpler to use but you won't be able to see what is really going on.   
+                    </li>
+                    <li>
+                        Otherwise, <a href="https://git-scm.com/downloads">Git's command-line interface (CLI)</a>, though intimidating at first, is the recommended option for beginner and advanced users. It allows you to get familiar the terminal no matter what device you are using. 
+                    </li>
+                </ul>
+            </p>
         </section>
-        <section class="main-section">
-            <header></header>
+        <section id="common_commands" class="main-section">
+            <header>Common Commands</header>
+            <h2>There are some basic commands to get you started:</h2>
+            <div>
+                <h3>Initializing a new repository</h3>
+                <code>git init</code>
+            </div>
+            <div>
+                <h3>Adding a file or files</h3>
+                <ul>
+                    <li>
+                        <code>git add index.html</code>
+                    </li>
+                    <li>
+                        <code>git add .</code>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Committing a change</h3>
+                <code>git commit -m "Your message."</code>
+            </div>
+            <div>
+                <h3>Getting a status</h3>
+                <code>git status</code>
+            </div>
+            <div>
+                <h3>Checking out commits or branches</h3>
+                <code>git log</code>
+            </div>
         </section>
     </main>
 </body>
