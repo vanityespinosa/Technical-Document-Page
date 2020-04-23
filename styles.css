@@ -1,0 +1,177 @@
+/*----------------------------------------------------------------------------
+                          Mobile Design First / Fallback
+------------------------------------------------------------------------------*/
+
+/*********************************
+    Global Styles
+*********************************/
+
+:root {
+    /* Primary colors */
+    --main: #4c00a4;
+    --nav-bar: #33007b;
+    --txt-color: #ab00ff;
+
+    /* Secondary Colors */
+    --txt-color-highlight: #8300c4;
+    --dark-bg: #31004a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    background-color: var(--main);
+    color: white;
+    font-size: 1.25rem;
+}
+
+header {
+    font-size: 2rem;
+}
+a {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+a:hover {
+    color: var(--txt-color-highlight);
+}
+
+/*********************************
+    Navbar Styles
+*********************************/
+#navbar {
+    text-align: center;
+}
+#navbar header {
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: var(--dark-bg);
+}
+#navbar .nav-link {
+    display: block;
+    border: 1px solid white;
+    font-size: 1.5rem;
+}
+
+/*********************************
+    Main-Doc Styles
+*********************************/
+#main-doc .main-section {
+    padding: 1rem 1.5rem;
+}
+#main-doc header {
+    padding-bottom: 1rem;
+}
+#main-doc p {
+    padding-bottom: 0.75rem;
+}
+#main-doc ul {
+    padding-left: 3rem;
+}
+
+/***** Common Commands Section *****/
+#common_commands h2 {
+    font-size: 1.50rem;
+    font-weight: normal;
+    padding-bottom: 1rem;
+}
+#common_commands h3 {
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+#common_commands code {
+    background-color: var(--dark-bg);
+    padding: 0.25rem 0.5rem;
+}
+#common_commands div {
+    padding-bottom: 1rem;
+}
+
+/***** Reference Section *****/
+#reference ul {
+    padding-bottom: 1rem;
+}
+
+/*********************************
+    Footer Styles
+*********************************/
+footer {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--dark-bg);
+}
+footer p {
+    padding-bottom: 1rem;
+}
+
+/*----------------------------------------------------------------------------
+                          Desktop Design
+------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1000px) {
+    /*********************************
+        Global Styles
+    *********************************/
+    body {
+        display: grid;
+        grid-template-areas: 
+        "sidebar main"
+        "sidebar main"
+        "sidebar footer";
+    }
+    /*********************************
+        Navbar Styles
+    *********************************/
+    #navbar {
+        grid-area: sidebar;
+        height: 100%;
+        width: 25vw;
+        border-right: 1px solid white;
+        border-left-style: none; 
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #navbar header {
+        height: 6rem;
+        width: 100%;
+        border-bottom: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #navbar .nav-link {
+        height: 4rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #navbar .nav-link:last-child {
+        border-bottom: none;
+    }
+    /*********************************
+        Main-Doc Styles
+    *********************************/
+    #main-doc {
+        grid-area: main;
+    }
+    /*********************************
+        Footer Styles
+    *********************************/
+    footer {
+        grid-area: footer;
+    }
+}
